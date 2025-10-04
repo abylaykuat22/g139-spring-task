@@ -36,16 +36,16 @@
             <div class="card h-100">
                 <div class="card-body">
                     <div class="card-title">
-                        <span class="badge-new" th:if="${app.isNew}">(Новая)</span>
-                        <span th:text="'Заявка от ' + ${app.name}">Заявка от Имя</span>
+                        <span class="badge-new" th:if="${app.handled}">(Новая)</span>
+                        <span th:text="'Заявка от ' + ${app.userName}">Заявка от Имя</span>
                     </div>
 
                     <div class="mb-2 small">
                         Курс:
-                        <span class="fw-semibold" th:text="${app.course}">Название курса</span>
+                        <span class="fw-semibold" th:text="${app.courseName}">Название курса</span>
                     </div>
 
-                    <p class="mb-2" th:text="${app.message}">
+                    <p class="mb-2" th:text="${app.commentary}">
                         Текст сообщения клиента
                     </p>
 
